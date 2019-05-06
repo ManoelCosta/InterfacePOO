@@ -1,4 +1,4 @@
-public class Retangulo {
+public class Retangulo implements ICalcGeometria{
     private double base;
     private double altura;
 
@@ -21,5 +21,15 @@ public class Retangulo {
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    @Override
+    public double calcPerimetro() {
+        return ((this.altura + this.base) * 2);
+    }
+
+    @Override
+    public double calcArea() {
+        return (this.base * this.altura);
     }
 }
